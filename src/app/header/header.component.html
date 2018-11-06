@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="http://localhost:4200/header">TBReach API</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" (click)="goTo('underconstruction')" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Users</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" (click)="goTo('adduser')" >Add User</a>
+              <a class="dropdown-item" (click)="goTo('underconstruction')">View Users</a>
+            </div>
+        </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" (click)="goTo('underconstruction')" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >Manage Locations</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" (click)="goTo('underconstruction')">Add Location</a>
+                <a class="dropdown-item" (click)="goTo('underconstruction')">View Locations</a>
+                <a class="dropdown-item" (click)="goTo('underconstruction')">Add Location Attributes</a>
+                <a class="dropdown-item" (click)="goTo('underconstruction')">View Locations Attributes</a>
+              </div>
+          </li>
+
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" (click)="goTo('underconstruction')" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Elements</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" (click)="goTo('underconstruction')">Add Elements</a>
+                  <a class="dropdown-item" (click)="goTo('underconstruction')">View Elements</a>
+                </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" (click)="goTo('underconstruction')" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manage Privileges</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" (click)="goTo('underconstruction')">Add Privileges</a>
+                  <a class="dropdown-item" (click)="goTo('viewprivileges')">View Privileges</a>
+                </div>
+            </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit" (click)="doLogout()">Log Out</button>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,25 @@
+
+<div style="margin-right: auto; margin-left: auto; width: 300px; padding-top: 80px">
+  <form class="form-signin" ngNativeValidate>
+    <img class="mb-4" img src="../../assets/images/loaderlogo.jpg" alt="ihs_logo" width="250px" style="display: block;margin: 0 auto;">
+      <h1 class="h3 mb-3 " style="text-align:center">TBReach-API Sign IN</h1>
+        <input type="text" id="userText"  class="form-control" placeholder="Username" name="userField" autoComplete="off"  required autofocus>
+        <br/>
+        <input type="password" id="inputPassword" class="form-control" autocomplete="new-password" placeholder="Password"  autoComplete="off" name="passField" required>
+        <br/>
+        <select class="form-control" required id="locs" placeholder="Select Location"   #selectedCategory>
+          <option value="" disabled selected>Select Location</option>
+          <option>IHS</option>
+          <option>IRD</option>
+          <option>JPMC-KHI</option>
+          <option>SSGHI-KHI</option>
+        </select>
+        <br/>
+          
+        <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="doLogin(selectedCategory.value)"   >Sign in</button>
+          <p class="mt-5 mb-3 text-muted" style="text-align: center">
+          <a href="http://www.ihsinformatics.com"> IHS INFORMATICS  </a> | &copy; 2017-2018</p>
+          </form>
+      </div>
+
+ 

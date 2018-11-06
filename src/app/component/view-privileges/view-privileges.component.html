@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+  <div class="privileges-div-style">
+  
+    <table>
+        <thead>
+          <tr>
+            <th>Privileges</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let p of data">
+          <tr>
+                {{p.privilege}}
+          </tr>
+        </ng-container>   
+        </tbody>
+      </table>
+
+
+  </div>

@@ -1,0 +1,134 @@
+<app-header></app-header>
+<div id="form_div" style="margin-right: auto; margin-left: auto;margin-top: 30px">
+<h1 style="text-align: center;margin-bottom: 18px;font-family: 'Raleway', sans-serif;"> ADD USER </h1>
+
+
+<form>
+  <table style="margin: 0px auto;">
+    <tr>
+        <td >
+            <label class="form-control" style="text-align: center;"> First Name: </label>
+        </td>
+
+        <td>
+            <input type="text" class="form-control" #FName id="validationServer01"  required >
+        </td>
+
+
+        <td>
+            <label class="form-control" style="text-align: center"> Last name: </label>
+        </td>
+
+        <td>
+            <input type="text" #LName required class="form-control" id="validationServer02" >
+        </td>
+      </tr>
+
+  
+
+      <tr align="center">
+          <td>
+                <label> Gender </label>
+          </td>
+        
+          <td>
+              <div class="btn-group" data-toggle="buttons">
+                  <label class="btn">
+                    <input type="radio" name='gender2'  (click)="setGender('male')" checked #gender><i class="fa fa-circle-o fa-2x" ></i><i class="fa fa-check-circle-o fa-2x"></i><span> Male</span>
+                  </label>
+                  <label class="btn">
+                    <input type="radio" name='gender2' (click)="setGender('female')" #gender><i class="fa fa-circle-o fa-2x" ></i><i class="fa fa-check-circle-o fa-2x"></i><span> Female</span>
+                  </label>
+                </div>
+          </td>
+
+
+        <td>
+            <label class="form-control" style="text-align: center"> User name: </label>
+        </td>
+
+        <td style="width: 250px">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                </div>
+                <input type="text" class="form-control"  #userName  id="validationServerUsername" aria-describedby="inputGroupPrepend3" required >
+              </div>
+        </td>
+                    
+              
+          
+      </tr>
+
+
+    <tr>
+        <td>
+            <label class="form-control" style="text-align: center">Birth Date</label>
+        </td>
+  
+        <td>
+            <input type="date" class="form-control" name="bday"  placeholder="Date of Birth" required style="width: 200px" #bday>
+        </td>
+
+
+
+    </tr>
+
+    <tr>
+        <td>
+            <label class="form-control" style="text-align: center"> Address: </label>
+        </td>
+
+        <td>
+            <input type="text" class="form-control" id="validationServer03" placeholder="City" required #city>
+        </td>
+
+        <td>
+            <input type="text" class="form-control" id="validationServer04" placeholder="State" required #state>
+        </td>
+            
+        <td>
+            <input type="text" class="form-control" id="validationServer05" placeholder="Zip" required #zip>
+        </td>
+                      
+        
+    </tr>
+
+    <tr>
+        <div style=" position: absolute;
+          left: 50%;
+          margin-left: -70px;">
+          <button class="btn btn-primary" type="submit" (click)="createUser(FName.value,LName.value,userName.value,bday.value,city.value,state.value,zip.value)">CREATE USER
+    
+          </button>
+    
+        </div>
+    
+      </tr>
+
+    </table>
+  </form>
+
+  <ng-container *ngFor="let contact of value.contacts">
+      <tr>
+          <td>
+                {{contact.name}}
+          </td>
+
+          <td>
+                {{contact.email}}
+          </td>
+
+          <td>
+                {{contact.info}}
+          </td>
+</ng-container>
+
+
+</div>
+
+
+
+
+
+
